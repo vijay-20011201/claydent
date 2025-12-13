@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claydent Dental Chair - Model X</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            color: #374151;
+            line-height: 1.6;
+        }
+
+        /* ========== PRODUCT HERO SECTION ========== */
+        .product-hero {
+            background: #f9fafb;
+            padding: 80px 20px;
+        }
+
+        .product-hero-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .product-hero-content h1 {
+            font-size: 42px;
+            font-weight: 600;
+            color: #0891b2;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .product-hero-content p {
+            font-size: 18px;
+            color: #6b7280;
+            margin-bottom: 32px;
+            line-height: 1.7;
+        }
+
+        .product-hero-buttons {
+            display: flex;
+            gap: 16px;
+        }
+
+        .btn {
+            padding: 14px 32px;
+            font-size: 16px;
+            font-weight: 500;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #0891b2 0%, #0e7490 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(8, 145, 178, 0.3);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #0891b2;
+            border: 2px solid #0891b2;
+        }
+
+        .btn-secondary:hover {
+            background: #0891b2;
+            color: white;
+        }
+
+        .product-hero-image {
+            background: white;
+            border-radius: 12px;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+        }
+
+        .product-hero-image-placeholder {
+            width: 80%;
+            height: 80%;
+            background: linear-gradient(135deg, #e0f2fe 0%, #cffafe 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0891b2;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        /* ========== PRODUCT OVERVIEW ========== */
+        .product-overview {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .product-overview-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .section-heading {
+            font-size: 36px;
+            font-weight: 600;
+            color: #0891b2;
+            margin-bottom: 28px;
+        }
+
+        .overview-text {
+            font-size: 17px;
+            color: #6b7280;
+            line-height: 1.8;
+            margin-bottom: 32px;
+        }
+
+        .overview-icons {
+            display: flex;
+            gap: 48px;
+            justify-content: center;
+        }
+
+        .overview-icon-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .overview-icon {
+            width: 56px;
+            height: 56px;
+            background: #e0f2fe;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .overview-icon svg {
+            width: 28px;
+            height: 28px;
+            color: #0891b2;
+        }
+
+        .overview-icon-item span {
+            font-size: 14px;
+            font-weight: 500;
+            color: #374151;
+        }
+
+        /* ========== PRODUCT IMAGE SECTION ========== */
+        .product-image-section {
+            padding: 80px 20px;
+            background: #f9fafb;
+        }
+
+        .product-image-container {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .main-product-image {
+            background: white;
+            border-radius: 12px;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            margin-bottom: 24px;
+        }
+
+        .main-product-image-placeholder {
+            width: 70%;
+            height: 70%;
+            background: linear-gradient(135deg, #e0f2fe 0%, #cffafe 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0891b2;
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        .thumbnail-images {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .thumbnail {
+            background: white;
+            border-radius: 8px;
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .thumbnail:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .thumbnail-placeholder {
+            color: #0891b2;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        /* ========== FEATURES SECTION ========== */
+        .features-section {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .features-container {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .features-container .section-heading {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .feature-card {
+            background: #f9fafb;
+            padding: 32px 28px;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+            border-color: #0891b2;
+        }
+
+        .feature-icon {
+            width: 52px;
+            height: 52px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            border: 2px solid #0891b2;
+        }
+
+        .feature-icon svg {
+            width: 26px;
+            height: 26px;
+            color: #0891b2;
+        }
+
+        .feature-card h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            font-size: 14px;
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        /* ========== SPECIFICATIONS SECTION ========== */
+        .specifications-section {
+            padding: 80px 20px;
+            background: #f9fafb;
+        }
+
+        .specifications-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .specifications-container .section-heading {
+            margin-bottom: 40px;
+        }
+
+        .specs-table {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+
+        .spec-row {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .spec-row:last-child {
+            border-bottom: none;
+        }
+
+        .spec-label {
+            padding: 20px 24px;
+            font-weight: 600;
+            color: #374151;
+            background: #f9fafb;
+        }
+
+        .spec-value {
+            padding: 20px 24px;
+            color: #6b7280;
+        }
+
+        /* ========== BROCHURE DOWNLOAD ========== */
+        .brochure-section {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .brochure-container {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .brochure-container .section-heading {
+            margin-bottom: 20px;
+        }
+
+        .brochure-text {
+            font-size: 17px;
+            color: #6b7280;
+            margin-bottom: 32px;
+        }
+
+        .btn-download {
+            background: white;
+            color: #0891b2;
+            border: 2px solid #0891b2;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-download:hover {
+            background: #0891b2;
+            color: white;
+        }
+
+        .btn-download svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .file-info {
+            margin-top: 12px;
+            font-size: 14px;
+            color: #9ca3af;
+        }
+
+        /* ========== REQUEST QUOTE SECTION ========== */
+        .quote-section {
+            padding: 80px 20px;
+            background: #f9fafb;
+        }
+
+        .quote-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .quote-container .section-heading {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .quote-form {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            color: #374151;
+            margin-bottom: 8px;
+        }
+
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: 12px 16px;
+            font-size: 15px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-family: inherit;
+            transition: all 0.3s;
+        }
+
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: #0891b2;
+            box-shadow: 0 0 0 3px rgba(8, 145, 178, 0.1);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-button {
+            width: 100%;
+            padding: 14px;
+            font-size: 16px;
+            font-weight: 500;
+            background: linear-gradient(135deg, #0891b2 0%, #0e7490 100%);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .form-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(8, 145, 178, 0.3);
+        }
+
+        /* ========== TRUST STATEMENT ========== */
+        .trust-section {
+            padding: 60px 20px;
+            background: white;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .trust-container {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .trust-text {
+            font-size: 17px;
+            color: #6b7280;
+            line-height: 1.8;
+            margin-bottom: 32px;
+        }
+
+        .trust-icons {
+            display: flex;
+            gap: 60px;
+            justify-content: center;
+        }
+
+        .trust-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .trust-item-icon {
+            width: 56px;
+            height: 56px;
+            background: #e0f2fe;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .trust-item-icon svg {
+            width: 28px;
+            height: 28px;
+            color: #0891b2;
+        }
+
+        .trust-item span {
+            font-size: 15px;
+            font-weight: 500;
+            color: #374151;
+        }
+
+        /* ========== CTA REPEAT ========== */
+        .cta-repeat {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #0891b2 0%, #0e7490 100%);
+        }
+
+        .cta-repeat-container {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .cta-repeat h2 {
+            font-size: 36px;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 32px;
+        }
+
+        .cta-repeat-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+        }
+
+        .btn-white {
+            background: white;
+            color: #0891b2;
+        }
+
+        .btn-white:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: #0891b2;
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 1024px) {
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .product-hero {
+                padding: 60px 20px;
+            }
+
+            .product-hero-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .product-hero-content h1 {
+                font-size: 32px;
+            }
+
+            .product-hero-content p {
+                font-size: 16px;
+            }
+
+            .product-hero-buttons {
+                flex-direction: column;
+            }
+
+            .product-hero-image {
+                height: 400px;
+            }
+
+            .section-heading {
+                font-size: 30px;
+            }
+
+            .main-product-image {
+                height: 400px;
+            }
+
+            .thumbnail-images {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .spec-row {
+                grid-template-columns: 1fr;
+            }
+
+            .spec-label {
+                border-bottom: none;
+            }
+
+            .overview-icons,
+            .trust-icons {
+                flex-direction: column;
+                gap: 32px;
+            }
+
+            .quote-form {
+                padding: 32px 24px;
+            }
+
+            .cta-repeat h2 {
+                font-size: 28px;
+            }
+
+            .cta-repeat-buttons {
+                flex-direction: column;
+            }
+
+            .product-overview,
+            .product-image-section,
+            .features-section,
+            .specifications-section,
+            .brochure-section,
+            .quote-section,
+            .cta-repeat {
+                padding: 60px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .product-hero-content h1 {
+                font-size: 26px;
+            }
+
+            .section-heading {
+                font-size: 26px;
+            }
+
+            .btn {
+                padding: 12px 24px;
+                font-size: 15px;
+            }
+
+            .thumbnail-images {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header will be loaded here -->
+    <div id="header"></div>
+    <!-- ========== PRODUCT HERO SECTION ========== -->
+    <section class="product-hero">
+        <div class="product-hero-container">
+            <div class="product-hero-content">
+                <h1>Claydent Dental Chair – Model X</h1>
+                <p>Ergonomically designed dental chair engineered for comfort, precision, and long-term reliability in modern dental clinics.</p>
+                <div class="product-hero-buttons">
+                    <a href="#quote" class="btn btn-primary">Request a Quote</a>
+                    <a href="#brochure" class="btn btn-secondary">Download Brochure</a>
+                </div>
+            </div>
+            <div class="product-hero-image">
+                <div class="product-hero-image-placeholder">
+                    Product Image
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PRODUCT OVERVIEW ========== -->
+    <section class="product-overview">
+        <div class="product-overview-container">
+            <h2 class="section-heading">Product Overview</h2>
+            <p class="overview-text">
+                The Claydent Dental Chair is designed to meet the demands of modern dental practices. 
+                Built with precision-engineered components, it ensures patient comfort, smooth operation, 
+                and long-lasting performance for daily clinical use. Every aspect of the chair is crafted 
+                to support efficient workflows while maintaining the highest standards of safety and durability.
+            </p>
+            <div class="overview-icons">
+                <div class="overview-icon-item">
+                    <div class="overview-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"/>
+                        </svg>
+                    </div>
+                    <span>Comfort</span>
+                </div>
+                <div class="overview-icon-item">
+                    <div class="overview-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+                        </svg>
+                    </div>
+                    <span>Durability</span>
+                </div>
+                <div class="overview-icon-item">
+                    <div class="overview-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                    </div>
+                    <span>Safety</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PRODUCT IMAGE SECTION ========== -->
+    <section class="product-image-section">
+        <div class="product-image-container">
+            <div class="main-product-image">
+                <div class="main-product-image-placeholder">
+                    Main Product View
+                </div>
+            </div>
+            <div class="thumbnail-images">
+                <div class="thumbnail">
+                    <div class="thumbnail-placeholder">Side View</div>
+                </div>
+                <div class="thumbnail">
+                    <div class="thumbnail-placeholder">Detail View</div>
+                </div>
+                <div class="thumbnail">
+                    <div class="thumbnail-placeholder">In Use</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FEATURES SECTION ========== -->
+    <section class="features-section">
+        <div class="features-container">
+            <h2 class="section-heading">Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                        </svg>
+                    </div>
+                    <h3>Ergonomic Design</h3>
+                    <p>Contoured seating designed for optimal patient comfort and practitioner access.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/>
+                        </svg>
+                    </div>
+                    <h3>Smooth & Silent Operation</h3>
+                    <p>Advanced hydraulic system ensures quiet and precise positioning movements.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
+                        </svg>
+                    </div>
+                    <h3>Adjustable Positioning</h3>
+                    <p>Multiple adjustment options for personalized patient and practitioner comfort.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+                        </svg>
+                    </div>
+                    <h3>Durable Frame Construction</h3>
+                    <p>Heavy-duty steel frame built to withstand daily clinical use and high patient loads.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        </svg>
+                    </div>
+                    <h3>Easy Maintenance</h3>
+                    <p>Simple service access and modular design for quick maintenance and repairs.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                        </svg>
+                    </div>
+                    <h3>Patient Comfort Focus</h3>
+                    <p>Premium upholstery and cushioning designed for extended treatment sessions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SPECIFICATIONS SECTION ========== -->
+    <section class="specifications-section" id="specifications">
+        <div class="specifications-container">
+            <h2 class="section-heading">Technical Specifications</h2>
+            <div class="specs-table">
+                <div class="spec-row">
+                    <div class="spec-label">Chair Type</div>
+                    <div class="spec-value">Hydraulic Dental Chair</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Upholstery Material</div>
+                    <div class="spec-value">Premium Medical-Grade Leather</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Load Capacity</div>
+                    <div class="spec-value">180 kg (396 lbs)</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Power Requirement</div>
+                    <div class="spec-value">220V / 50Hz</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Movement Controls</div>
+                    <div class="spec-value">Electric with Manual Override</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Backrest Adjustment</div>
+                    <div class="spec-value">0° to 90°</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Height Range</div>
+                    <div class="spec-value">380mm - 850mm</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Warranty</div>
+                    <div class="spec-value">2 Years Comprehensive</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== BROCHURE DOWNLOAD ========== -->
+    <section class="brochure-section" id="brochure">
+        <div class="brochure-container">
+            <h2 class="section-heading">Product Brochure</h2>
+            <p class="brochure-text">
+                Download our comprehensive product brochure for detailed specifications, dimensions, and technical information.
+            </p>
+            <button class="btn btn-download">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                </svg>
+                Download Brochure
+            </button>
+            <div class="file-info">PDF Format • 2.4 MB</div>
+        </div>
+    </section>
+
+    <!-- ========== REQUEST QUOTE SECTION ========== -->
+    <section class="quote-section" id="quote">
+        <div class="quote-container">
+            <h2 class="section-heading">Request a Quote</h2>
+            <form class="quote-form">
+                <div class="form-group">
+                    <label class="form-label">Full Name *</label>
+                    <input type="text" class="form-input" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Clinic / Company Name *</label>
+                    <input type="text" class="form-input" placeholder="Enter clinic or company name" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Phone Number *</label>
+                    <input type="tel" class="form-input" placeholder="Enter your phone number" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Email Address *</label>
+                    <input type="email" class="form-input" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">City *</label>
+                    <input type="text" class="form-input" placeholder="Enter your city" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Message / Requirements</label>
+                    <textarea class="form-textarea" placeholder="Tell us about your requirements..."></textarea>
+                </div>
+                <button type="submit" class="form-button">Submit Quote Request</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ========== TRUST STATEMENT ========== -->
+    <section class="trust-section">
+        <div class="trust-container">
+            <p class="trust-text">
+                Manufactured with strict quality standards for clinical environments. 
+                Every Claydent product undergoes rigorous testing to ensure safety, reliability, 
+                and long-term performance in demanding dental practice settings.
+            </p>
+            <div class="trust-icons">
+                <div class="trust-item">
+                    <div class="trust-item-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <span>Quality Certified</span>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-item-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                    </div>
+                    <span>Safety Standards</span>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-item-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <span>Long-Term Reliability</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CTA REPEAT ========== -->
+    <section class="cta-repeat">
+        <div class="cta-repeat-container">
+            <h2>Interested in This Dental Chair?</h2>
+            <div class="cta-repeat-buttons">
+                <a href="#quote" class="btn btn-white">Request a Quote</a>
+                <a href="#specifications" class="btn btn-outline">View Specifications</a>
+            </div>
+        </div>
+    </section>
+    <!-- Footer will be loaded here -->
+    <div id="footer"></div>
+
+    <script>
+        // Function to load external HTML files
+        function loadHTML(elementId, filePath) {
+            fetch(filePath)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to load ' + filePath);
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById(elementId).innerHTML = data;
+                    
+                    // Re-execute scripts if any (for mobile menu functionality)
+                    const scripts = document.getElementById(elementId).getElementsByTagName('script');
+                    for (let i = 0; i < scripts.length; i++) {
+                        eval(scripts[i].innerHTML);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error loading HTML:', error);
+                });
+        }
+
+        // Load header, home page content, and footer on page load
+        window.addEventListener('DOMContentLoaded', function() {
+            loadHTML('header', 'header.html');
+            loadHTML('main-content', 'home.html');
+            loadHTML('footer', 'footer.html');
+        });
+
+        // Function to load different pages
+        function loadPage(page) {
+            loadHTML('main-content', page + '.html');
+        }
+    </script>
+</body>
+</html>
