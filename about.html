@@ -269,63 +269,67 @@
             line-height: 1.8;
         }
 
-        /* ========== CTA SECTION ========== */
-        .cta {
-            padding: 80px 20px;
-            background: linear-gradient(135deg, #0891b2 0%, #0e7490 100%);
-        }
+         /* ========== CTA SECTION ========== */
+.cta {
+    padding: 80px 20px;
+    background: #ffffff;
+}
 
-        .cta-container {
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: center;
-        }
+.cta-container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
 
-        .cta h2 {
-            font-size: 36px;
-            font-weight: 600;
-            color: white;
-            margin-bottom: 32px;
-        }
+.cta h2 {
+    font-size: 36px;
+    font-weight: 600;
+    color: #0e7490;
+    margin-bottom: 32px;
+}
 
-        .cta-buttons {
-            display: flex;
-            gap: 16px;
-            justify-content: center;
-        }
+/* Buttons Wrapper */
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
 
-        .btn {
-            padding: 14px 32px;
-            font-size: 16px;
-            font-weight: 500;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-            transition: all 0.3s;
-        }
+/* BUTTON 1 — Hover Color Change */
+.btn-hover {
+    background: #ffffff;
+    color: #0891b2;
+    border: 2px solid #0891b2;
+    padding: 14px 36px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
 
-        .btn-white {
-            background: white;
-            color: #0891b2;
-        }
+.btn-hover:hover {
+    background: #0891b2;
+    color: #ffffff;
+}
 
-        .btn-white:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
-        }
+/* BUTTON 2 — Fixed Blue (No Hover Change) */
+.btn-fixed {
+    background: #0891b2;
+    color: #ffffff;
+    border: 2px solid #0891b2;
+    padding: 14px 36px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+}
 
-        .btn-outline {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-        }
-
-        .btn-outline:hover {
-            background: white;
-            color: #0891b2;
-        }
+/* Disable hover effect completely */
+.btn-fixed:hover {
+    background: #0891b2;
+    color: #ffffff;
+}
 
         /* ========== RESPONSIVE ========== */
         @media (max-width: 1024px) {
@@ -436,10 +440,9 @@
                 <p>Precision Dental Chair Manufacturing You Can Trust</p>
             </div>
             <div class="about-hero-image">
-                <div class="about-hero-image-placeholder">
-                    Manufacturing Image
-                </div>
-            </div>
+    <img src="images/aboutimage.jpg" alt="Dental Chair Manufacturing Facility" class="about-hero-img">
+</div>
+
         </div>
     </section>
 
@@ -592,14 +595,14 @@
 
     <!-- ========== CTA SECTION ========== -->
     <section class="cta">
-        <div class="cta-container">
-            <h2>Learn More About Our Products</h2>
-            <div class="cta-buttons">
-                <a href="#products" class="btn btn-white">View Products</a>
-                <a href="#contact" class="btn btn-outline">Contact Us</a>
-            </div>
+    <div class="cta-container">
+        <h2>Ready to Get Started?</h2>
+        <div class="cta-buttons">
+            <a href="#" class="btn-hover">Request Quote</a>
+            <a href="#" class="btn-fixed">Download Brochure</a>
         </div>
-    </section>
+    </div>
+</section>
     <!-- Footer will be loaded here -->
     <div id="footer"></div>
 

@@ -169,68 +169,84 @@
         }
 
         /* ========== PRODUCT IMAGE SECTION ========== */
-        .product-image-section {
-            padding: 80px 20px;
-            background: #f9fafb;
-        }
+.product-image-section {
+    padding: 80px 20px;
+    background: #f9fafb;
+}
 
-        .product-image-container {
-            max-width: 1280px;
-            margin: 0 auto;
-        }
+.product-image-container {
+    max-width: 1280px;
+    margin: auto;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
 
-        .main-product-image {
-            background: white;
-            border-radius: 12px;
-            height: 600px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-            margin-bottom: 24px;
-        }
+/* ===== Main Product Image ===== */
+.main-product-image {
+    flex: 1;
+    background: #ffffff;
+    border-radius: 16px;
+    height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
 
-        .main-product-image-placeholder {
-            width: 70%;
-            height: 70%;
-            background: linear-gradient(135deg, #e0f2fe 0%, #cffafe 100%);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #0891b2;
-            font-size: 20px;
-            font-weight: 500;
-        }
+.main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
 
-        .thumbnail-images {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
+/* ===== Thumbnail Images ===== */
+.thumbnail-images {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
 
-        .thumbnail {
-            background: white;
-            border-radius: 8px;
-            height: 180px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-            cursor: pointer;
-            transition: all 0.3s;
-        }
+.thumbnail {
+    width: 130px;
+    height: 110px;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
 
-        .thumbnail:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
+.thumbnail:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
 
-        .thumbnail-placeholder {
-            color: #0891b2;
-            font-size: 14px;
-            font-weight: 500;
-        }
+.thumb-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* ===== Mobile Responsive ===== */
+@media (max-width: 768px) {
+    .product-image-container {
+        flex-direction: column;
+    }
+
+    .main-product-image {
+        height: 420px;
+    }
+
+    .thumbnail-images {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+
 
         /* ========== FEATURES SECTION ========== */
         .features-section {
@@ -521,51 +537,67 @@
             color: #374151;
         }
 
-        /* ========== CTA REPEAT ========== */
-        .cta-repeat {
-            padding: 80px 20px;
-            background: linear-gradient(135deg, #0891b2 0%, #0e7490 100%);
-        }
+         /* ========== CTA SECTION ========== */
+.cta {
+    padding: 80px 20px;
+    background: #ffffff;
+}
 
-        .cta-repeat-container {
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: center;
-        }
+.cta-container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
 
-        .cta-repeat h2 {
-            font-size: 36px;
-            font-weight: 600;
-            color: white;
-            margin-bottom: 32px;
-        }
+.cta h2 {
+    font-size: 36px;
+    font-weight: 600;
+    color: #0e7490;
+    margin-bottom: 32px;
+}
 
-        .cta-repeat-buttons {
-            display: flex;
-            gap: 16px;
-            justify-content: center;
-        }
+/* Buttons Wrapper */
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
 
-        .btn-white {
-            background: white;
-            color: #0891b2;
-        }
+/* BUTTON 1 — Hover Color Change */
+.btn-hover {
+    background: #ffffff;
+    color: #0891b2;
+    border: 2px solid #0891b2;
+    padding: 14px 36px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
 
-        .btn-white:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
-        }
+.btn-hover:hover {
+    background: #0891b2;
+    color: #ffffff;
+}
 
-        .btn-outline {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-        }
+/* BUTTON 2 — Fixed Blue (No Hover Change) */
+.btn-fixed {
+    background: #0891b2;
+    color: #ffffff;
+    border: 2px solid #0891b2;
+    padding: 14px 36px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+}
 
-        .btn-outline:hover {
-            background: white;
-            color: #0891b2;
-        }
+/* Disable hover effect completely */
+.btn-fixed:hover {
+    background: #0891b2;
+    color: #ffffff;
+}
 
         /* ========== RESPONSIVE ========== */
         @media (max-width: 1024px) {
@@ -681,18 +713,17 @@
     <section class="product-hero">
         <div class="product-hero-container">
             <div class="product-hero-content">
-                <h1>Claydent Dental Chair – Model X</h1>
+                <h1>Claydent Dental Chair – PHOENIX - 59</h1>
                 <p>Ergonomically designed dental chair engineered for comfort, precision, and long-term reliability in modern dental clinics.</p>
                 <div class="product-hero-buttons">
                     <a href="#quote" class="btn btn-primary">Request a Quote</a>
-                    <a href="#brochure" class="btn btn-secondary">Download Brochure</a>
+                    <a href="Phoenix-59.pdf" class="btn btn-secondary">Download Brochure</a>
                 </div>
             </div>
             <div class="product-hero-image">
-                <div class="product-hero-image-placeholder">
-                    Product Image
-                </div>
-            </div>
+    <img src="images/product1.jpg" alt="Dental Chair Product" class="product-hero-img" height="430px" width="550px">
+</div>
+
         </div>
     </section>
 
@@ -736,26 +767,40 @@
     </section>
 
     <!-- ========== PRODUCT IMAGE SECTION ========== -->
-    <section class="product-image-section">
-        <div class="product-image-container">
-            <div class="main-product-image">
-                <div class="main-product-image-placeholder">
-                    Main Product View
-                </div>
+<section class="product-image-section">
+    <div class="product-image-container">
+
+        <!-- Main Image -->
+        <div class="main-product-image">
+            <img src="images/productmain.jpg"
+                 alt="Dental Chair Main View"
+                 class="main-img">
+        </div>
+
+        <!-- Thumbnails -->
+        <div class="thumbnail-images">
+            <div class="thumbnail">
+                <img src="images/productback.jpg"
+                     alt="Dental Chair Side View"
+                     class="thumb-img">
             </div>
-            <div class="thumbnail-images">
-                <div class="thumbnail">
-                    <div class="thumbnail-placeholder">Side View</div>
-                </div>
-                <div class="thumbnail">
-                    <div class="thumbnail-placeholder">Detail View</div>
-                </div>
-                <div class="thumbnail">
-                    <div class="thumbnail-placeholder">In Use</div>
-                </div>
+
+            <div class="thumbnail">
+                <img src="images/productdetail.jpg"
+                     alt="Dental Chair Detail View"
+                     class="thumb-img">
+            </div>
+
+            <div class="thumbnail">
+                <img src="images/productzoomimage.jpg"
+                     alt="Dental Chair In Use"
+                     class="thumb-img">
             </div>
         </div>
-    </section>
+
+    </div>
+</section>
+
 
     <!-- ========== FEATURES SECTION ========== -->
     <section class="features-section">
@@ -768,8 +813,16 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
                         </svg>
                     </div>
-                    <h3>Ergonomic Design</h3>
-                    <p>Contoured seating designed for optimal patient comfort and practitioner access.</p>
+                    <h3>Chair</h3>
+                <p>
+                    <ul>
+                        <li>Ergonomically designed chair</li>
+                        <li>Aluminium easy to operate hand rest</li>
+                        <li>Sleek and comfortable Back Rest</li>
+                        <li>Double articulated Head rest</li>
+                        <li>Synchronized chair movement</li>
+                    </ul>
+                </p>
                 </div>
 
                 <div class="feature-card">
@@ -778,8 +831,14 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/>
                         </svg>
                     </div>
-                    <h3>Smooth & Silent Operation</h3>
-                    <p>Advanced hydraulic system ensures quiet and precise positioning movements.</p>
+                    <h3>Light</h3>
+                <p>
+                    <ul>
+                        <li>Latest Design LED light with sensor</li>
+                        <li>Varying intensity</li>
+                        <li>180° smooth movement</li>
+                    </ul>
+                </p>
                 </div>
 
                 <div class="feature-card">
@@ -788,8 +847,19 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
                         </svg>
                     </div>
-                    <h3>Adjustable Positioning</h3>
-                    <p>Multiple adjustment options for personalized patient and practitioner comfort.</p>
+                    <h3>Unit</h3>
+                <p>
+                    <ul>
+                        <li>Under Hanging Working Tray</li>
+                        <li>Unit fitting of 2 Airotor Points</li>
+                        <li>One Micro motor Point</li>
+                        <li>One three Way syringe</li>
+                        <li>Feather touch control</li>
+                        <li>2 memory program and 2 preset program</li>
+                        <li>Glass Spittoon box with 90 degree movement</li>
+                        <li>Booster Bottle Connection</li>
+                    </ul>
+                </p>
                 </div>
 
                 <div class="feature-card">
@@ -798,8 +868,14 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
                         </svg>
                     </div>
-                    <h3>Durable Frame Construction</h3>
-                    <p>Heavy-duty steel frame built to withstand daily clinical use and high patient loads.</p>
+                    <h3>Assistant Arm</h3>
+                <p>
+                    <ul>
+                        <li>Assistant Tray with Low and High Suction</li>
+                        <li>3 way syringe</li>
+                        <li>Feather touch control for chair movement</li>
+                    </ul>
+                </p>
                 </div>
 
                 <div class="feature-card">
@@ -809,8 +885,15 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
                         </svg>
                     </div>
-                    <h3>Easy Maintenance</h3>
-                    <p>Simple service access and modular design for quick maintenance and repairs.</p>
+                    <h3>Stool</h3>
+                <p>
+                    <ul>
+                        <li>Doctors Stool</li>
+                        <li>5 castors</li>
+                        <li>Up down movement</li>
+                        <li>Front Back Movement</li>
+                    </ul>
+                </p>
                 </div>
 
                 <div class="feature-card">
@@ -819,14 +902,22 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
                         </svg>
                     </div>
-                    <h3>Patient Comfort Focus</h3>
-                    <p>Premium upholstery and cushioning designed for extended treatment sessions.</p>
+                    <h3>USP</h3>
+                <p>
+                    <ul>
+                        <li>Unique Design With Class and Quality</li>
+                        <li>Most Popular Model with Right Price and warranty</li>
+                        <li>Latest Design LED light with sensor with varying intensity</li>
+                        <li>Latest Design with Synchronized Chair Movements</li>
+                        <li>Jiecang Motors</li>
+                    </ul>
+                </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ========== SPECIFICATIONS SECTION ========== -->
+    <!-- ========== SPECIFICATIONS SECTION ========== 
     <section class="specifications-section" id="specifications">
         <div class="specifications-container">
             <h2 class="section-heading">Technical Specifications</h2>
@@ -865,24 +956,30 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
 
     <!-- ========== BROCHURE DOWNLOAD ========== -->
-    <section class="brochure-section" id="brochure">
-        <div class="brochure-container">
-            <h2 class="section-heading">Product Brochure</h2>
-            <p class="brochure-text">
-                Download our comprehensive product brochure for detailed specifications, dimensions, and technical information.
-            </p>
-            <button class="btn btn-download">
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                </svg>
-                Download Brochure
-            </button>
-            <div class="file-info">PDF Format • 2.4 MB</div>
-        </div>
-    </section>
+<section class="brochure-section" id="brochure">
+    <div class="brochure-container">
+        <h2 class="section-heading">Product Brochure</h2>
+        <p class="brochure-text">
+            Download our comprehensive product brochure for detailed specifications, dimensions, and technical information.
+        </p>
+
+        <a href="Phoenix-59.pdf"
+           class="btn btn-download"
+           download>
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+            </svg>
+            Download Brochure
+        </a>
+
+        <div class="file-info">PDF Format • 2.4 MB</div>
+    </div>
+</section>
+
 
     <!-- ========== REQUEST QUOTE SECTION ========== -->
     <section class="quote-section" id="quote">
@@ -955,16 +1052,16 @@
         </div>
     </section>
 
-    <!-- ========== CTA REPEAT ========== -->
-    <section class="cta-repeat">
-        <div class="cta-repeat-container">
-            <h2>Interested in This Dental Chair?</h2>
-            <div class="cta-repeat-buttons">
-                <a href="#quote" class="btn btn-white">Request a Quote</a>
-                <a href="#specifications" class="btn btn-outline">View Specifications</a>
-            </div>
+    <!-- ========== CTA SECTION ========== -->
+    <section class="cta">
+    <div class="cta-container">
+        <h2>Ready to Get Started?</h2>
+        <div class="cta-buttons">
+            <a href="#" class="btn-hover">Request Quote</a>
+            <a href="#" class="btn-fixed">Download Brochure</a>
         </div>
-    </section>
+    </div>
+</section>
     <!-- Footer will be loaded here -->
     <div id="footer"></div>
 
